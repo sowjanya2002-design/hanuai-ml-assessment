@@ -1,0 +1,728 @@
+{
+ "rows": 1000,
+ "rawRows": 1000,
+ "columns": 20,
+ "duplicates": 0,
+ "profile": [
+  {
+   "column": "Event id",
+   "dtype": "str",
+   "missing": 0,
+   "unique": 1000
+  },
+  {
+   "column": "Opened date",
+   "dtype": "str",
+   "missing": 0,
+   "unique": 397
+  },
+  {
+   "column": "CAUSAL_VERBATIM",
+   "dtype": "str",
+   "missing": 1,
+   "unique": 944
+  },
+  {
+   "column": "CORRECTION_VERBATIM",
+   "dtype": "str",
+   "missing": 0,
+   "unique": 952
+  },
+  {
+   "column": "CUSTOMER_VERBATIM",
+   "dtype": "str",
+   "missing": 0,
+   "unique": 990
+  },
+  {
+   "column": "BUILD_DATE",
+   "dtype": "str",
+   "missing": 0,
+   "unique": 37
+  },
+  {
+   "column": "BUILD_PLANT_DESC",
+   "dtype": "str",
+   "missing": 0,
+   "unique": 8
+  },
+  {
+   "column": "CAUSAL_CD_DESC",
+   "dtype": "str",
+   "missing": 3,
+   "unique": 38
+  },
+  {
+   "column": "COMPLAINT_CD_DESC",
+   "dtype": "str",
+   "missing": 0,
+   "unique": 9
+  },
+  {
+   "column": "IN_USE_DATE",
+   "dtype": "str",
+   "missing": 1,
+   "unique": 285
+  },
+  {
+   "column": "MAKE",
+   "dtype": "str",
+   "missing": 0,
+   "unique": 4
+  },
+  {
+   "column": "MODEL",
+   "dtype": "str",
+   "missing": 0,
+   "unique": 23
+  },
+  {
+   "column": "MODLYR",
+   "dtype": "int64",
+   "missing": 0,
+   "unique": 1
+  },
+  {
+   "column": "PLANT",
+   "dtype": "str",
+   "missing": 0,
+   "unique": 8
+  },
+  {
+   "column": "Trigger",
+   "dtype": "str",
+   "missing": 995,
+   "unique": 2
+  },
+  {
+   "column": "Failure Component",
+   "dtype": "str",
+   "missing": 995,
+   "unique": 5
+  },
+  {
+   "column": "Failure Condition",
+   "dtype": "str",
+   "missing": 995,
+   "unique": 5
+  },
+  {
+   "column": "Additional Context",
+   "dtype": "str",
+   "missing": 995,
+   "unique": 2
+  },
+  {
+   "column": "Fix Component",
+   "dtype": "str",
+   "missing": 995,
+   "unique": 3
+  },
+  {
+   "column": "Fix Condition",
+   "dtype": "str",
+   "missing": 995,
+   "unique": 2
+  }
+ ],
+ "plants": [
+  {
+   "name": "Fort Wayne",
+   "value": 217
+  },
+  {
+   "name": "Flint",
+   "value": 208
+  },
+  {
+   "name": "Silao",
+   "value": 199
+  },
+  {
+   "name": "Spring Hill - Truck",
+   "value": 169
+  },
+  {
+   "name": "Lansing Delta",
+   "value": 142
+  },
+  {
+   "name": "Ramos Arizpe",
+   "value": 39
+  },
+  {
+   "name": "Fairfax II",
+   "value": 16
+  },
+  {
+   "name": "Lansing - LGR",
+   "value": 10
+  }
+ ],
+ "causal": [
+  {
+   "name": "Module/Component-No/Incorrect Communication",
+   "value": 377
+  },
+  {
+   "name": "Module/Component-Shorted",
+   "value": 237
+  },
+  {
+   "name": "Module/Component-Registers Incorrectly",
+   "value": 121
+  },
+  {
+   "name": "Wiring/Electrical/Sensors-No/Incorrect Communication",
+   "value": 50
+  },
+  {
+   "name": "Module/Component-Broken",
+   "value": 41
+  },
+  {
+   "name": "Wiring/Electrical/Sensors-Shorted",
+   "value": 23
+  },
+  {
+   "name": "Other-Campaign/ Tech Bulletin",
+   "value": 22
+  },
+  {
+   "name": "Other-Follow operation",
+   "value": 22
+  },
+  {
+   "name": "Other-No trouble found  - adjusted / reprogrammed",
+   "value": 21
+  },
+  {
+   "name": "Wiring/Electrical/Sensors-Registers Incorrectly",
+   "value": 12
+  }
+ ],
+ "complaint": [
+  {
+   "name": "Audio/Entertainment/Navigation - Audio",
+   "value": 337
+  },
+  {
+   "name": "Audio/Entertainment/Navigation - Other issues",
+   "value": 263
+  },
+  {
+   "name": "Audio/Entertainment/Navigation - Communication",
+   "value": 194
+  },
+  {
+   "name": "Audio/Entertainment/Navigation - Video",
+   "value": 103
+  },
+  {
+   "name": "Features/Controls/Displays - Other issues",
+   "value": 47
+  },
+  {
+   "name": "Audio/Entertainment/Navigation - Navigation",
+   "value": 32
+  },
+  {
+   "name": "Features/Controls/Displays - Gauges/Warning Lights",
+   "value": 12
+  },
+  {
+   "name": "\u00a0Audio/Entertainment/Navigation\u00a0-\u00a0Abnormal\u00a0Noise",
+   "value": 11
+  },
+  {
+   "name": "Features/Controls/Displays - Odometer",
+   "value": 1
+  }
+ ],
+ "make": [
+  {
+   "name": "ThunderVolt",
+   "value": 488
+  },
+  {
+   "name": "NovaSprint",
+   "value": 335
+  },
+  {
+   "name": "NebulaCruiser",
+   "value": 125
+  },
+  {
+   "name": "TurboFlux",
+   "value": 52
+  }
+ ],
+ "model": [
+  {
+   "name": "HyperFury X",
+   "value": 148
+  },
+  {
+   "name": "TurboFlare",
+   "value": 117
+  },
+  {
+   "name": "QuantumRider",
+   "value": 109
+  },
+  {
+   "name": "AeroSpecter",
+   "value": 86
+  },
+  {
+   "name": "NebulaJet",
+   "value": 77
+  },
+  {
+   "name": "ElectroStreak",
+   "value": 75
+  },
+  {
+   "name": "StellarGlide",
+   "value": 62
+  },
+  {
+   "name": "ShadowPulse",
+   "value": 61
+  },
+  {
+   "name": "FusionNova",
+   "value": 59
+  },
+  {
+   "name": "SolarStriker",
+   "value": 52
+  }
+ ],
+ "issueType": [
+  {
+   "name": "Component Failure",
+   "value": 861
+  },
+  {
+   "name": "Software Issue",
+   "value": 106
+  },
+  {
+   "name": "Connectivity Issue",
+   "value": 19
+  },
+  {
+   "name": "Other",
+   "value": 13
+  },
+  {
+   "name": "Electrical Issue",
+   "value": 1
+  }
+ ],
+ "components": [
+  {
+   "name": "Radio",
+   "value": 931
+  },
+  {
+   "name": "Display/Screen",
+   "value": 446
+  },
+  {
+   "name": "Wiring/Connector",
+   "value": 161
+  },
+  {
+   "name": "Camera",
+   "value": 137
+  },
+  {
+   "name": "Navigation/GPS",
+   "value": 70
+  },
+  {
+   "name": "USB/CarPlay",
+   "value": 69
+  },
+  {
+   "name": "OnStar/Telematics",
+   "value": 56
+  },
+  {
+   "name": "Bluetooth",
+   "value": 45
+  },
+  {
+   "name": "Antenna",
+   "value": 29
+  },
+  {
+   "name": "Amplifier",
+   "value": 26
+  },
+  {
+   "name": "Speaker",
+   "value": 12
+  }
+ ],
+ "conditions": [
+  {
+   "name": "Inoperative",
+   "value": 268
+  },
+  {
+   "name": "Black/Blank Screen",
+   "value": 254
+  },
+  {
+   "name": "Connection Loss",
+   "value": 215
+  },
+  {
+   "name": "Intermittent",
+   "value": 141
+  },
+  {
+   "name": "Freezing/Rebooting",
+   "value": 106
+  },
+  {
+   "name": "No Sound",
+   "value": 99
+  },
+  {
+   "name": "Unresponsive Controls",
+   "value": 40
+  },
+  {
+   "name": "Static/Noise",
+   "value": 13
+  }
+ ],
+ "fixes": [
+  {
+   "name": "Replaced",
+   "value": 888
+  },
+  {
+   "name": "Reprogrammed/Software",
+   "value": 756
+  },
+  {
+   "name": "Repaired Wiring",
+   "value": 80
+  },
+  {
+   "name": "No Fault Found",
+   "value": 37
+  }
+ ],
+ "monthly": [
+  {
+   "name": "2019-08",
+   "value": 3
+  },
+  {
+   "name": "2019-09",
+   "value": 12
+  },
+  {
+   "name": "2019-10",
+   "value": 22
+  },
+  {
+   "name": "2019-11",
+   "value": 31
+  },
+  {
+   "name": "2019-12",
+   "value": 27
+  },
+  {
+   "name": "2020-01",
+   "value": 67
+  },
+  {
+   "name": "2020-02",
+   "value": 69
+  },
+  {
+   "name": "2020-03",
+   "value": 68
+  },
+  {
+   "name": "2020-04",
+   "value": 50
+  },
+  {
+   "name": "2020-05",
+   "value": 64
+  },
+  {
+   "name": "2020-06",
+   "value": 65
+  },
+  {
+   "name": "2020-07",
+   "value": 54
+  },
+  {
+   "name": "2020-08",
+   "value": 60
+  },
+  {
+   "name": "2020-09",
+   "value": 45
+  },
+  {
+   "name": "2020-10",
+   "value": 63
+  },
+  {
+   "name": "2020-11",
+   "value": 56
+  },
+  {
+   "name": "2020-12",
+   "value": 37
+  },
+  {
+   "name": "2021-01",
+   "value": 39
+  },
+  {
+   "name": "2021-02",
+   "value": 42
+  },
+  {
+   "name": "2021-03",
+   "value": 51
+  },
+  {
+   "name": "2021-04",
+   "value": 47
+  },
+  {
+   "name": "2021-05",
+   "value": 27
+  },
+  {
+   "name": "2021-06",
+   "value": 1
+  }
+ ],
+ "daysInUse": {
+  "median": 202.0,
+  "mean": 217.2
+ },
+ "topics": [
+  {
+   "id": 0,
+   "keywords": [
+    "internal",
+    "failure",
+    "fault",
+    "states",
+    "customer",
+    "inop",
+    "sound",
+    "cust"
+   ],
+   "count": 111
+  },
+  {
+   "id": 1,
+   "keywords": [
+    "xm",
+    "customer",
+    "vehicle",
+    "tac",
+    "states",
+    "update",
+    "case",
+    "concern"
+   ],
+   "count": 370
+  },
+  {
+   "id": 2,
+   "keywords": [
+    "camera",
+    "inop",
+    "rear",
+    "backup",
+    "reverse",
+    "video",
+    "red",
+    "view"
+   ],
+   "count": 107
+  },
+  {
+   "id": 3,
+   "keywords": [
+    "screen",
+    "blank",
+    "goes",
+    "black",
+    "display",
+    "touch",
+    "driving",
+    "customer"
+   ],
+   "count": 178
+  },
+  {
+   "id": 4,
+   "keywords": [
+    "card",
+    "sd",
+    "error",
+    "navigation",
+    "message",
+    "removed",
+    "code",
+    "usb"
+   ],
+   "count": 58
+  },
+  {
+   "id": 5,
+   "keywords": [
+    "ground",
+    "ok",
+    "checked",
+    "power",
+    "tested",
+    "module",
+    "communication",
+    "circuits"
+   ],
+   "count": 176
+  }
+ ],
+ "sample": [
+  {
+   "Event id": "D-14801",
+   "CUSTOMER_VERBATIM": "customer reports that radio and screen is intermittantly inop inspect and advise",
+   "failure_component": "Radio, Display/Screen, Amplifier, OnStar/Telematics",
+   "failure_condition": "Inoperative, Intermittent, Freezing/Rebooting",
+   "fix_action": "Replaced, Reprogrammed/Software",
+   "issue_type": "Software Issue"
+  },
+  {
+   "Event id": "D-14869",
+   "CUSTOMER_VERBATIM": "radio is inoperable check and advise",
+   "failure_component": "Radio, Display/Screen, OnStar/Telematics, Wiring/Connector",
+   "failure_condition": "Inoperative, Black/Blank Screen, No Sound, Freezing/Rebooting, Unresponsive Controls, Connection Loss",
+   "fix_action": "Replaced, Reprogrammed/Software",
+   "issue_type": "Software Issue"
+  },
+  {
+   "Event id": "D-14555",
+   "CUSTOMER_VERBATIM": "customer states radio screen and onstar keeps attempting to connect to wifi network with a prompt and declines everytime duetodecline of terms onstar a team at al serra and gm have all recommended seeing service department as",
+   "failure_component": "Radio, Display/Screen, OnStar/Telematics",
+   "failure_condition": "Freezing/Rebooting, Connection Loss",
+   "fix_action": "",
+   "issue_type": "Software Issue"
+  },
+  {
+   "Event id": "D-14704",
+   "CUSTOMER_VERBATIM": "pantalla se pone negra",
+   "failure_component": "",
+   "failure_condition": "",
+   "fix_action": "",
+   "issue_type": "Other"
+  },
+  {
+   "Event id": "D-15142",
+   "CUSTOMER_VERBATIM": "customer states a message of lost satelite signal trying to reconnect check and advise",
+   "failure_component": "Radio, Display/Screen",
+   "failure_condition": "Inoperative, Connection Loss",
+   "fix_action": "Replaced, Reprogrammed/Software",
+   "issue_type": "Component Failure"
+  },
+  {
+   "Event id": "D-15149",
+   "CUSTOMER_VERBATIM": "customer reports sd card is missing at time of delivery please order",
+   "failure_component": "Radio",
+   "failure_condition": "",
+   "fix_action": "Replaced, Reprogrammed/Software",
+   "issue_type": "Component Failure"
+  },
+  {
+   "Event id": "D-14666",
+   "CUSTOMER_VERBATIM": "c s customer stated stereo screen went back no audio steering wheel commands and knob commands on head unit did not work asdesigned all came back normal on next ignition cycle please advise",
+   "failure_component": "Radio, Display/Screen",
+   "failure_condition": "Inoperative, Black/Blank Screen, No Sound, Intermittent",
+   "fix_action": "Replaced, Reprogrammed/Software, Repaired Wiring, No Fault Found",
+   "issue_type": "Component Failure"
+  },
+  {
+   "Event id": "D-14857",
+   "CUSTOMER_VERBATIM": " minor electrical cust states back up camera inop intermittently again screen going black with a picture of camera with a line though it kerrie has picture chk adv auth by ms kuzmak roche replace radio technicar ",
+   "failure_component": "Radio, Display/Screen, Camera",
+   "failure_condition": "Inoperative, Black/Blank Screen, Intermittent, Connection Loss",
+   "fix_action": "Replaced, Reprogrammed/Software",
+   "issue_type": "Component Failure"
+  },
+  {
+   "Event id": "D-14465",
+   "CUSTOMER_VERBATIM": "customer states that radio power will be on and there will no sound p lease check and advise",
+   "failure_component": "Radio, Amplifier, OnStar/Telematics, Wiring/Connector",
+   "failure_condition": "No Sound, Connection Loss",
+   "fix_action": "Replaced, Reprogrammed/Software",
+   "issue_type": "Component Failure"
+  },
+  {
+   "Event id": "D-14745",
+   "CUSTOMER_VERBATIM": "electrical repairs c s that his xm radio is inop until he chances the channals one he chances the channal the customer will startto get sound please check advise",
+   "failure_component": "Radio, Display/Screen, Wiring/Connector",
+   "failure_condition": "Inoperative, Freezing/Rebooting, Connection Loss",
+   "fix_action": "Replaced, Reprogrammed/Software",
+   "issue_type": "Software Issue"
+  },
+  {
+   "Event id": "D-14850",
+   "CUSTOMER_VERBATIM": "c s intermittently when starting vehicle channel not available message will come up on radio screen presets will turn gray andbecome unavailable customer can shut vehicle off and restart vehicle few minutes later and all is working normally this onlyoccurs with xm radio stations on customers last visit we did customer has since contacted xm as outlined in andwas told that the over the air update had been performed between customer is still having the same issues he wastold by xm that it was a module issue and radio would have to be replaced please open a tac case and see what their answer is",
+   "failure_component": "Radio, Display/Screen, Antenna",
+   "failure_condition": "Intermittent, Freezing/Rebooting, Connection Loss",
+   "fix_action": "Replaced, Reprogrammed/Software, Repaired Wiring",
+   "issue_type": "Software Issue"
+  },
+  {
+   "Event id": "D-14615",
+   "CUSTOMER_VERBATIM": "check advise customer states that the navigation system will not l oad the maps ",
+   "failure_component": "Radio, Navigation/GPS",
+   "failure_condition": "",
+   "fix_action": "Replaced, Reprogrammed/Software",
+   "issue_type": "Component Failure"
+  },
+  {
+   "Event id": "D-15257",
+   "CUSTOMER_VERBATIM": "customer states sirius xm forzen and wont load inspect and advise",
+   "failure_component": "Radio, Display/Screen, USB/CarPlay, Wiring/Connector",
+   "failure_condition": "Freezing/Rebooting",
+   "fix_action": "Replaced, Reprogrammed/Software",
+   "issue_type": "Software Issue"
+  },
+  {
+   "Event id": "D-14782",
+   "CUSTOMER_VERBATIM": "c s onstar is not connecting when button pushed",
+   "failure_component": "Radio, OnStar/Telematics",
+   "failure_condition": "Connection Loss",
+   "fix_action": "Replaced",
+   "issue_type": "Component Failure"
+  },
+  {
+   "Event id": "D-15075",
+   "CUSTOMER_VERBATIM": "c s radio will not come on screen is just dark",
+   "failure_component": "Radio, Display/Screen, OnStar/Telematics, USB/CarPlay, Wiring/Connector",
+   "failure_condition": "Black/Blank Screen, Unresponsive Controls, Connection Loss",
+   "fix_action": "Replaced, Reprogrammed/Software",
+   "issue_type": "Component Failure"
+  }
+ ]
+}

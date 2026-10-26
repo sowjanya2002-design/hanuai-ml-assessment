@@ -1,0 +1,6 @@
+pandas
+scikit-learn
+openpyxl
+selenium
+vaderSentiment
+jupyter
