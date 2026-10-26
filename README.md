@@ -1,52 +1,59 @@
-HanuAi ML Assessment — Infotainment Warranty Repair Analysis
-Analysis of 1,000 infotainment warranty repair events (raw file: data/Hanuai_task2_assignment.csv), covering the two assignment tasks plus a web dashboard that presents the results.
+# HanuAi ML Assessment — Infotainment Warranty Repair Analysis
 
-Task 1 — Review scraping & sentiment: pulls product reviews from a URL, de-duplicates them, scores each review with VADER sentiment, and groups scores by aspect (screen, sound, bluetooth, etc.).
-Task 2 — EDA & text mining: profiles the data, cleans it, tags every event with a keyword dictionary (failure component, failure condition, fix action, issue type), then runs TF-IDF + NMF topic modelling to surface recurring problem clusters.
-Dashboard: a React app that shows the data-quality summary, charts, mined tags, topic clusters and stakeholder recommendations.
-Project structure
-data/Hanuai_task2_assignment.csv    raw dataset (1,000 rows, 20 columns)
-analysis/task1_scraper_sentiment.py Task 1: scraper + sentiment scoring
-analysis/task2_analysis.py          Task 2: EDA, tagging, topic modelling
-analysis/requirements.txt           Python dependencies
-analysis/output/tagged_events.csv   tagged events (deliverable)
-src/data/analysis.json              analysis results consumed by the dashboard
-src/routes/index.tsx                dashboard page
-src/routes/code.tsx                 source viewer for the Python files
-src/routes/guide.tsx                setup & deploy walkthrough
-src/components/                     charts and page shell
-Prerequisites
-Python 3.10+ — python.org(opens in a new tab) (tick "Add Python to PATH" on Windows)
-Node.js 18+ (includes npm) — nodejs.org(opens in a new tab)
-Run the Python analysis
-From the project folder:
+An end-to-end Machine Learning and Text Mining assessment analyzing 1,000 infotainment warranty repair records, paired with a full interactive web dashboard deployed publicly on Render.
 
-python -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
-pip install -r analysis/requirements.txt
+- 🌐 **Live Application:** [https://hanuai-ml-assessment-gpcn.onrender.com/](https://hanuai-ml-assessment-gpcn.onrender.com/)
+- 💻 **GitHub Repository:** [https://github.com/sowjanya2002-design/hanuai-ml-assessment](https://github.com/sowjanya2002-design/hanuai-ml-assessment)
 
-# Task 2 — writes analysis/output/tagged_events.csv and src/data/analysis.json
-python analysis/task2_analysis.py data/Hanuai_task2_assignment.csv
+---
 
-# Task 1 — needs Chrome; pass the review page URL
-python analysis/task1_scraper_sentiment.py "https://www.bestbuy.ca/en-ca/product/15711013/review"
-Run the dashboard
-npm install
-npm run dev                     # open http://localhost:8080
-Other commands
-npm run build                   # production build
-npm run preview                 # serve the production build locally
-npm run lint                    # eslint
-npm run test                    # vitest
-npm run format                  # prettier
-Publishing notebooks
-The assignment asks for notebooks. Open Jupyter, create one notebook per task, and paste the matching script into cells (jupyter notebook starts the server; it is included in analysis/requirements.txt).
+## Overview
 
-Hosting
-npm run build produces the deployable output in dist/. Upload that folder to any static host, or connect the repository to a host such as Vercel or Netlify — point the build command at npm run build and the output directory at dist.
+### Task 1 — Product Review Scraper & Sentiment Analysis (`analysis/task1_scraper_sentiment.py`)
+- Automated scraper using Selenium WebDriver for review pages.
+- De-duplicates reviews across sort filters using SHA-256 text hashing.
+- VADER sentiment scoring with aspect-level categorization (Display/Screen, Audio/Sound, Connectivity/Bluetooth, Usability, Performance).
+- Generates detailed sentiment summary and aspect sentiment breakdowns.
 
-Headline findings
-Radio-related events dominate the dataset (~93% of records mention the radio).
-Roughly three quarters of corrections were reprogramming or software updates rather than part replacements.
-Median time in use before a failure was reported: ~200 days.
-Topic modelling separated distinct clusters, most clearly a black/blank-screen group and a rear-camera group.
+### Task 2 — Warranty Event EDA, Text Mining & Topic Modeling (`analysis/task2_analysis.py`)
+- **Data Profiling & Hygiene:** Evaluates completeness, missingness, and duplicate entries across 1,000 warranty records (`data/Hanuai_task2_assignment.csv`).
+- **Domain Dictionary Tagging:** Tags warranty narratives across four dimensions:
+  - Failure Component (Radio/Head Unit, Touchscreen, Camera, Bluetooth, Audio, etc.)
+  - Failure Condition (Black/Blank Screen, Frozen/Unresponsive, Audio Cutout, etc.)
+  - Fix Action (Reprogrammed/Software Flash, Replaced Unit, Wiring Check, etc.)
+  - Issue Type (Software Bug, Hardware Defect, Intermittent Glitch)
+- **Topic Modeling:** TF-IDF vectorization with Non-Negative Matrix Factorization (NMF) discovering 6 recurring failure themes.
+- **Output:** Produces `analysis/output/tagged_events.csv` and `src/data/analysis.json`.
+
+### Web Dashboard
+Interactive web analytics dashboard built with React, TanStack Start, and Recharts, featuring:
+- Executive KPIs & Data Quality Audit
+- Failure Trend Timelines & Days-in-Use Histograms
+- Component, Condition, and Action Distribution Visualizations
+- Extracted Topic Clusters and Tagged Event Inspector
+- Actionable Engineering & Quality Assurance Recommendations
+
+---
+
+## Project Structure
+
+```text
+├── data/
+│   └── Hanuai_task2_assignment.csv     # Raw 1,000-record warranty dataset
+├── analysis/
+│   ├── task1_scraper_sentiment.py      # Task 1: Selenium scraper & VADER sentiment
+│   ├── task2_analysis.py               # Task 2: EDA, text mining & NMF topic modeling
+│   ├── requirements.txt                # Python dependencies
+│   └── output/
+│       └── tagged_events.csv           # Tagged warranty events deliverable
+├── src/
+│   ├── data/
+│   │   └── analysis.json               # Analysis metrics consumed by dashboard
+│   ├── routes/
+│   │   ├── index.tsx                   # Main analytics dashboard route
+│   │   ├── code.tsx                    # In-browser Python script viewer
+│   │   └── guide.tsx                   # Methodology & setup guide
+│   └── components/                     # Reusable charts and UI shell
+├── render.yaml                         # Render deployment blueprint
+├── .node-version                       # Node.js 22 runtime specification
+└── vite.config.ts                      # Build configuration targeting Node server
